@@ -1,0 +1,74 @@
+.videoBlock {
+    //min-height: 800px;
+    padding-bottom: 58px;
+    @include xs-block {
+        padding-bottom: 78px;
+    }
+}
+
+%layouts{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.videoContainer {
+    padding-left: 48px;
+    padding-top: 48px;
+    @include xs-block {
+        padding-left: 0;
+        padding-top: 35px;
+    }
+
+    &__text {
+        @include roboto-sans(32px, 400);
+        color:#474747;
+        margin-bottom: 32px;
+        @include xs-block {
+            text-align: center;
+        }
+    }
+    &__video {
+        max-width: 800px;
+        position: relative;
+       // overflow: hidden;
+        @include xs-block {
+            max-width: 95%;
+            @include m-auto();
+        }
+        &::before {
+            @extend %layouts;
+            background: rgba(36, 0, 81, 0.3);
+            left:15px;
+            top:15px;
+            // @include xs-block {
+            //     left:10px;
+            //     top:10px;
+            // }
+        }
+        &::after {
+            @extend %layouts;
+            background: rgba(36, 0, 81, 0.5);
+            left:10px;
+            top:10px;
+            // @include xs-block {
+            //     left:5px;
+            //     top:5px;
+            // }
+        }
+    }
+    &__ratio {
+        padding-top: 56.25%;
+        height: 0;
+    }
+    &__content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}

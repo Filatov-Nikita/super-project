@@ -1,0 +1,61 @@
+.wrapper {
+    @include wrapper();
+    max-width: 100%;
+    &-form {
+      max-width: 1180px;
+    }
+  }
+  .titleName {
+    color: $purpure;
+    @include roboto-sans(40px, 700);
+    @include xs-block() {
+      font-size: 28px;
+    }
+    &::after {
+      margin-top: 18px;
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      max-width: 952px;
+      @include bg($purpure);
+    }
+  }
+  .containerPurpureBlock {
+    @include bg($purpure);
+    background: {
+      image:url($img_path + 'circleItem.png');
+      repeat:no-repeat;
+      position-y: center;
+    }
+    padding: 35px 0;
+  }
+
+.mainItemBlock {
+    &__text {
+        color: $yiellow;
+        @include roboto-sans(38px, 700);
+        @include xs-block {
+            font-size: 24px;
+            margin-left: 85px;
+        }
+        line-height: 1.4;
+        margin-left: 55px;
+        &-pick {
+          color:$wht;
+          font-size: 48px;
+          @include xs-block {
+            font-size: 28px;
+          }
+        }
+    }
+}
+%line {
+    display: block;
+    @include bg($wht);
+    height: 1px;
+    width: 237px;
+    @include xs-block() {
+        width: 200px;
+      }
+  }

@@ -1,0 +1,50 @@
+.aim {
+    @include bg($wht);
+    padding: 120px 0 25px 0;
+    min-height: 350px;
+    @include xs-block{
+       padding-bottom: 15px
+    }
+    overflow: hidden;
+    @include xs-block() {
+        padding-top: 60px;
+    }
+}
+
+.aimList__ul{
+    margin-top: 38px;
+    @include xs-block() {
+        margin-top: 28px;
+    }
+}
+
+.aimList__li {
+    margin-left: 82px;
+    @include roboto-sans(20px, 400);
+    color: map-get($map: $colors, $key: text);
+    line-height: 1.5;
+    margin-bottom: 50px;
+    @include xs-block() {
+        margin-left: 42px;
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        @include xs-block() {
+            max-width: 280px;
+        }
+    }
+    &::before {
+        content: "";
+        display: inline-block;
+        @include bg(#F6AD49);
+        @include radius(50%);
+        width: 10px;
+        height: 10px;
+        margin-right: 24px;
+        @include xs-block() {
+            width: 13px;
+            height: 13px;
+        }
+    }
+}

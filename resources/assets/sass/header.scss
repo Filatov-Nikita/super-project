@@ -1,0 +1,160 @@
+.navMain {
+  padding: 8px 0;
+  @include xs-block {
+    padding: 12px 0;
+  }
+  @include dflex(space-between);
+  &__a{
+    @include link-reset();
+    color: $wht;
+    @include source-sans(16px, 400);
+    @include hover() {
+      color: map-get($map: $colors, $key: yielow)
+    }
+  }
+  &__ul {
+    align-self: center; 
+    @include xs-block() {
+     display: none; 
+    }
+  }
+  &__li {
+    @include ib-menu();
+    line-height: 0;
+    vertical-align: top;
+    margin-left: 16px;
+    $list: 1, 2, 3, 4;
+   @each $num in $list {
+     &-icon#{$num} {
+      font-size: 22px;
+      &::before {
+        line-height: 0;
+        vertical-align: middle;
+        margin-right: 5px;
+        content: "";
+        display: inline-block;
+        width: 19px;
+        height: 17px;
+        background-image: url('../img/icon#{$num}.png');
+        background-position: center;
+      }
+     }
+   }
+  }
+  &__link {
+    padding: 0 5px;
+    @include link-reset();
+    color: $wht;
+    @include source-sans(27px, 400);
+    @include xs-block() {
+      font-size: 20px;
+    };
+    @include hover($transition: true) {
+      color: #000;
+      @include bg(map-get($colors, yielow));
+      @include radius(2px);
+    }
+  }
+} 
+
+.container_nav {
+  @include bg(map-get($colors, dark_main));
+  @include xs-block() {
+    @include bg(map-get($colors, main));
+  };
+  margin: 0;
+  padding: 0;
+}
+.container_header {
+  @include xs-block {
+    min-height: 100vh;
+  }
+  overflow: hidden;
+  background: {
+    color: map-get($map: $colors, $key: main);
+    image: url($img_path + "circle.png");
+    repeat: no-repeat;
+    position-y: 100px; 
+    position-x: -65px;
+  
+  }
+    min-height: 610px;
+}
+
+.textBlock {
+  position: relative;
+  &__full {
+    line-height: 1;
+    position: absolute;
+    left:190px;
+    top:139px;
+    @include xs-block() {
+      position: static;
+    }
+  }
+  &__title {
+    @include source-sans(66px, 700);
+    color: map-get($map: $colors, $key: yielow);
+    margin-bottom: 58px;
+    @include xs-block() {
+      text-align: center;
+      font-size: 48px;
+      text-align: left;
+     // padding-top: 10vh;
+      padding: 10vh 10px 0 20px;
+    }
+  }
+  &__subtitle {
+    color: $wht;
+    @include roboto-sans($size: 32px, $weight: 700);
+    margin-left: 58px;
+    line-height: 1.5;
+    cursor: pointer;
+    @include xs-block() {
+      font-size: 22px;
+    }
+    &::after {
+      @extend %line;
+      content: "";
+      margin-top: 20px;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+#lines {
+  @extend %line;
+  margin-left: 230px;
+  transition: transform, 0.9s;
+  transform: translateX(-1000px);
+  @include xs-block() {
+    margin-left: 200px;
+  }
+  &::after {
+    @extend %line;
+    content: "";
+    transform: translateY(18px);
+    margin-left: 172px;
+    @include xs-block() {
+      display: none;
+    }
+  }
+}
+.yiellowButton {
+  @include bg($yiellow);
+  @include radius(15px);
+  @include source-sans(24px, 400);
+  @include m-auto();
+  @include hover($transition: true) {
+    background-color: 
+    map-get($map: $colors, $key: green);
+    color:$wht; 
+  }
+  color: #241d1d;
+  padding: 5px 72px;
+  max-width: 195px;
+  text-align: center;
+  transform: translateY(-20px);
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+} 

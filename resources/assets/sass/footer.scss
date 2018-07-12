@@ -1,0 +1,44 @@
+.footerBlock {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    $colorLogoText:#263154;
+    $bg: map-get($map: $colors, $key: footerBg);
+  //  min-height: 150px;
+    @include bg($bg);
+    &__socialAndContacts {
+        color: $colorLogoText;
+        @include source-sans(20px, 400);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__logo {
+        margin-bottom: 10px;
+    }
+    &__link {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__usefullLink {
+        display: inline-block;
+        margin-left: 150px;
+        width: 100%;
+        max-width: 750px;
+        ul {
+            @include dflex();
+            justify-content: space-between;
+        }
+        li {
+           // margin-right: 35px;
+        }
+        a {
+            @include roboto-sans(16px, 400);
+            @include link-reset();
+            color:#474747;
+            @include hover(true, color) {
+                color:$purpure;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+

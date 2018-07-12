@@ -1,0 +1,80 @@
+.programmSection {
+    padding:  40px 0 50px 50px;
+    margin-bottom: 60px;
+    @include xs-block {padding-left: 0;  margin-bottom: 45px;}
+    background-image: linear-gradient(90deg,#2eac6a,#81be00);
+    &__title {
+        color:$wht;
+        @include roboto-sans(44px, 700);
+        @include xs-block {
+           font-size: 38px;
+        }
+        &::after {
+            @extend %line;
+            content: "";
+            height: 2px;
+            margin-top: 15px;
+            margin-left: 100px;
+            width: 100%;
+            max-width: 450px;
+            @include xs-block {margin-left: 0;}
+        }
+        span {
+            display: inline-block;
+            &::after {
+                @extend %line;
+                content: "";
+                height: 2px;
+                margin-top: 15px;
+                width: calc(100% + 15px);
+                @include xs-block {
+                    width: 100%;
+                    display: none
+                }
+            }
+        }
+    }
+}
+.lessons__row {
+    @include row-flex();
+    justify-content: space-around;
+    @include xs-block {justify-content: center;}
+}
+.lessons {
+    $black: #000;
+    &-marginTop {
+        margin-top: 50px;
+    }
+    &__item {
+        @include col();
+        @include size(5.5);
+        @include size-xs(11);
+        color: $black;
+        padding: 24px 15px 38px 35px;
+        @include radius(3px);
+        @include bg($wht);
+        position: relative;
+        margin-bottom: 48px;
+        z-index: 100;
+        &::after {
+            content: "";
+            display: block;
+            @include bg(rgba(255,255,255,0.5));
+            @include absolute($zIndex: -5) {
+                top: -15px;
+                left: -15px;
+                @include xs-block {left: 15px;};
+            }
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__header {
+        @include roboto-sans(30px, 500);
+        margin-bottom: 40px;
+    }
+    &__description {
+        @include roboto-sans(24px, 300);
+        line-height: 1.7;
+    }
+}

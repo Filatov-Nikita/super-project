@@ -1,0 +1,99 @@
+.formsBlock {
+    $black: #031729;
+    min-height: 500px;
+    padding-bottom: 65px;
+    @include bg($yiellow);
+}
+.formOrder {
+    $red: #ef1533;
+    padding-top: 58px;
+    &__mainHeader {
+        @include source-sans(38px, 700);
+        @include uppercase;
+        color: $purpure;
+    }
+    &__container {
+        margin-top: 55px;
+        @include dflex();
+        justify-content: space-between;
+    }
+    &__text {
+        @include source-sans(19px, 400);
+    }
+    &__topText {
+        font-size: 20px;
+        line-height: 1.5
+    }
+    &__bottomText {
+        margin-top: 60px;
+        line-height: 1.7;
+        @include source-sans(18px, 400);
+        a {
+            color:$red;
+            font-size: 20px;
+        }
+    }
+}
+.formAction {
+    input {
+        @include radius(5px);
+        @include inp-reset;
+    }
+    &__input {
+        margin-bottom: 20px;
+        input {
+            height: 45px;
+            width: 100%;
+            text-indent: 15px;
+            @include source-sans(18px, 400)
+        }
+    }
+    &__buttonSend {
+        input {
+            color: $wht;
+            @include roboto-sans(22px, 400);
+            display: block;
+            width: 100%;
+            @include uppercase;
+            @include bg($purpure);
+            padding: 10px 0;
+            cursor: pointer;
+            @include hover(true) {
+                background: #2eac6a;
+            }
+        }
+    }
+    &-basis {
+        flex-basis: 350px;
+    }
+}
+
+.saleBlock {
+    color:$purpure;
+    &__actually {
+        @include source-sans(48px, 400);
+        display: inline-block;
+    }
+    &__sale {
+        position: relative;
+        display: inline-block;
+        margin-right: 55px;
+        span {
+            @include source-sans(28px, 400);
+            text-decoration: line-through;
+            color: #270051;
+            opacity: 0.8;
+        }
+    }
+    &__saleSize {
+        opacity: 1!important;
+        font-size: 17px!important;
+        text-decoration: none!important;
+        @include absolute();
+        top:-20px;
+        right: -30px;
+    }
+    &-marginTop {
+        margin-top: 45px;
+    }
+}

@@ -1,8 +1,17 @@
+$colors: (
+    main: #270051,
+    dark_main: #1d0931,
+    yielow: #fbe669,
+    wht: #fff,
+    text: #38383a,
+    green: #00a651,
+    footerBg: #e1e6eb
+);
 
-// Body
-$body-bg: #f5f8fa;
+$purpure: map-get($map: $colors, $key: main);
+$wht: map-get($map: $colors, $key: wht);
+$yiellow: map-get($map: $colors, $key: yielow);
 
-// Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$wrapper_sizes: ();
+
+$img_path: "../img/";
