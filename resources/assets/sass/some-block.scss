@@ -1,9 +1,8 @@
 .l-profitItemBlock {
-    //min-height: 1000px;
     @include bg(#f4f5fa);
 }
 .mainItemBlock__text-bigger {
-    font-size: 40px;
+    font-size: 36px;
     @include md-block {
         font-size: 28px;
     }

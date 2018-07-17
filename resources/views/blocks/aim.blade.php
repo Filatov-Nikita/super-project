@@ -1,4 +1,4 @@
-<div class="aim">
+<div class="aim" id="aim">
         <div class="wrapper">
             <div class="aimList">
                 <div class="titleName">Если ты находишься на этой странице, то ты</div>

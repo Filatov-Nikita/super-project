@@ -437,7 +437,6 @@ img {
   margin-left: 58px;
   line-height: 1.5;
   cursor: pointer;
-  color: #fff;
 }
 
 @media screen and (max-width: 900px) {
@@ -456,6 +455,11 @@ img {
   content: "";
   margin-top: 20px;
   margin-bottom: 18px;
+}
+
+.textBlock a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #lines {
@@ -484,19 +488,15 @@ img {
 
 .yiellowButton {
   color: #241d1d;
-  padding: 5px 0px;
   max-width: 300px;
   width: 80%;
   text-align: center;
-  cursor: pointer;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   background: #fbe669;
   border-radius: 15px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
   font-weight: 400;
-  margin-left: auto;
-  margin-right: auto;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(50%);
@@ -513,6 +513,14 @@ img {
   .yiellowButton {
     font-size: 20px;
   }
+}
+
+.yiellowButton__a {
+  display: block;
+  color: initial;
+  text-decoration: none;
+  width: 100%;
+  padding: 5px 0px;
 }
 
 .l-button-container {
@@ -860,7 +868,7 @@ img {
 }
 
 .mainItemBlock__text-bigger {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 @media screen and (max-width: 900px) {

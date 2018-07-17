@@ -18,6 +18,7 @@
     @yield('header')
     @yield('content')
     @yield('footer')
+    <script src = "{{url('js/jquery.min.js')}}"></script>
     <script src = "{{url('js/super.js')}}"></script>
 </body>
 </html>

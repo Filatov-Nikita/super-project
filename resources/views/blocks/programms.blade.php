@@ -1,4 +1,4 @@
-<section class="programmSection">
+<section class="programmSection" id="programm">
     <div class="wrapper">
         <div class="programmSection__title"><span>Программа курса</span></div>
     </div>

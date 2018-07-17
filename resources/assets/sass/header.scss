@@ -3,6 +3,7 @@
   @include xs-block {
     padding: 12px 0;
   }
+  
   @include dflex(space-between);
   &__a{
     @include link-reset();
@@ -72,14 +73,13 @@
   margin: 0;
   padding: 0;
 }
+
 .container_header {
   position: relative;
   overflow: hidden;
   @include md-block {
     min-height: 700px;
   }
-
-  //overflow: hidden;
   background: {
     color: map-get($map: $colors, $key: main);
     image: url($img_path + "circle.png");
@@ -131,13 +131,17 @@
     margin-left: 58px;
     line-height: 1.5;
     cursor: pointer;
-    color: $wht;
+    
     &::after {
       @extend %line;
       content: "";
       margin-top: 20px;
       margin-bottom: 18px;
     }
+  }
+  a {
+    color: $wht;
+    @include link-reset;
   }
 }
 
@@ -157,16 +161,13 @@
 }
 .yiellowButton {
   color: #241d1d;
-  padding: 5px 0px;
   max-width: 300px;
   width: 80%;
   text-align: center;
-  cursor: pointer;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   @include bg($yiellow);
   @include radius(15px);
   @include source-sans(24px, 400);
-  @include m-auto();
   @include absolute-center(true) {bottom: 0}
   @include hover($transition: true) {
     background-color: 
@@ -174,6 +175,13 @@
     color:$wht; 
   }
   @include md-block { font-size: 20px }
+  &__a {
+    display: block;
+    color:initial;
+    @include link-reset;
+    width: 100%;
+    padding: 5px 0px;
+  }
 } 
 .l-button-container {
   position: relative;

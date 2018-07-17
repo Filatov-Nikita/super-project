@@ -1,4 +1,4 @@
-<div class="formsBlock">
+<div class="formsBlock" id="form">
     <div class="wrapper wrapper-form">
         <div class="formOrder">
             <h2 class="formOrder__mainHeader">Максимальная скидка уже сейчас!</h2>

@@ -12,4 +12,15 @@ window.onload = function () {
     })
 }
 
+$(function(){
+    var links = $('.scroll');
+    links.on('click', function (e) {
+       e.preventDefault(); 
+       link = $(this);
+       var target = link.attr('href');
+       $('html, body').stop(true).animate({
+       scrollTop: $(target).offset().top
+       }, 700);
+    });
+});
 
