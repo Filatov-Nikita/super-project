@@ -9,6 +9,7 @@
         @include('blocks.aim')
         @include('blocks.videoBlock')
         @include('blocks.programms')
+        @include('blocks.freeBlocks')
         @include('blocks.someBlock')
         @include('blocks.forms')
     </main>

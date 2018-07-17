@@ -1,6 +1,91 @@
-.someBlock1 {
-    min-height: 500px;
+.l-profitItemBlock {
+    //min-height: 1000px;
+    @include bg(#f4f5fa);
 }
 .mainItemBlock__text-bigger {
     font-size: 40px;
+    @include md-block {
+        font-size: 28px;
+    }
+    @include xs-block {
+        font-size: 24px;
+    }
+}
+
+.profitItemBlock {
+    $color: #50667b;
+    padding: 88px 0;
+    @include md-block {
+        padding: 48px 0;
+        padding-bottom: 0;
+    }
+    color: $color;
+    &__header {
+        text-align: center;
+        h2 {
+            @include roboto-sans(60px, 500);
+            @include md-block {font-size: 48px}
+            @include uppercase;
+        }
+    }
+    &__products {
+        margin-top: 85px;
+        @include row-flex;
+        justify-content: space-between;
+        position: relative;
+        @include md-block {
+           justify-content: center;
+        }
+    }
+   
+    &__item {
+        @include col;
+        @include size(4);
+        @include size-md(10);
+        @include md-block {margin-bottom: 70px;}
+        position: relative;
+        padding: 48px 25px;
+        @include md-block {padding: 35px 25px;}
+        color:rgb(39, 64, 100);
+        $list: before, after;
+        @each $item in $list {
+            &-#{$item} {
+                background: {
+                    image: url($img_path + $item +'.png');
+                    repeat: no-repeat;
+                    size:55%;
+                    position: center;
+                }
+                @include md-block {background-size: 45%;}
+            }
+        }
+        border: 2px dotted $color;
+        margin-top: 40px;
+    }
+    &__title {
+       text-align: center;
+       @include roboto-sans(38px, 400);
+       @include md-block {font-size: 34px}
+       position: absolute;
+       top:-80px;
+       left: 50%;
+       transform: translateX(-50%);
+       color: $color;
+    }
+    &__item-line {
+        @include size(3);
+        @include bg($yiellow);
+        height: 6px;
+        border:0;
+        padding: 0;
+        margin: 0;
+        align-self: center;
+        @include md-block {display: none}
+    }
+    &__li {
+        margin-bottom: 20px;
+        @include source-sans(24px, 400);
+        @include md-block {font-size: 22px}
+        line-height: 1.5;
+    }
 }

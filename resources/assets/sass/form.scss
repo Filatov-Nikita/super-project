@@ -3,6 +3,9 @@
     min-height: 500px;
     padding-bottom: 65px;
     @include bg($yiellow);
+    @include md-block {
+        text-align: center;
+     }
 }
 .formOrder {
     $red: #ef1533;
@@ -16,13 +19,19 @@
         margin-top: 55px;
         @include dflex();
         justify-content: space-between;
+        @include md-block {
+            justify-content: center
+        }
     }
     &__text {
         @include source-sans(19px, 400);
+        @include md-block {
+            margin-bottom: 25px;
+        }
     }
     &__topText {
         font-size: 20px;
-        line-height: 1.5
+        line-height: 1.5;
     }
     &__bottomText {
         margin-top: 60px;
@@ -55,7 +64,7 @@
             display: block;
             width: 100%;
             @include uppercase;
-            @include bg($purpure);
+            @include bg(#060606);
             padding: 10px 0;
             cursor: pointer;
             @include hover(true) {

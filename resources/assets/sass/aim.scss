@@ -1,18 +1,22 @@
 .aim {
-    @include bg($wht);
-    padding: 120px 0 25px 0;
+    @include bg(#f4f5fa);
+    padding: 180px 0 180px 0;
     min-height: 350px;
     @include xs-block{
-       padding-bottom: 15px
+       padding-bottom: 15px;
+       padding-top: 60px;
     }
     overflow: hidden;
-    @include xs-block() {
-        padding-top: 60px;
+    @include md-block() {
+        padding-top: 70px;
+        padding-bottom: 20px;
     }
 }
 
 .aimList__ul{
     margin-top: 38px;
+    @include row-flex;
+    justify-content: space-evenly;
     @include xs-block() {
         margin-top: 28px;
     }
@@ -23,13 +27,18 @@
     @include roboto-sans(20px, 400);
     color: map-get($map: $colors, $key: text);
     line-height: 1.5;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    @include col;
+    @include size(5);
+    @include size-md(10);
+    @include size-xs(12);
     @include xs-block() {
         margin-left: 42px;
     }
     span {
         display: inline-block;
         vertical-align: middle;
+        max-width: 85%;
         @include xs-block() {
             max-width: 280px;
         }

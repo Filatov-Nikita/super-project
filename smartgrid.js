@@ -13,7 +13,7 @@ const settings =
                         width:'960px',
                         fields:'20px' },
                 md: {
-                        width:'850px',
+                        width:'900px',
                         fields: '20px' }, 
                 sm: {
                         width:'780px',

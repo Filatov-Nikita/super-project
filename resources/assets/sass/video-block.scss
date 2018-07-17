@@ -1,9 +1,12 @@
 .videoBlock {
-    //min-height: 800px;
-    padding-bottom: 58px;
+    padding-bottom: 120px;
+    @include md-block {
+        padding-bottom: 85px;
+    }
     @include xs-block {
         padding-bottom: 78px;
     }
+    @include bg(#F4F5FA);
 }
 
 %layouts{
@@ -17,17 +20,23 @@
 
 .videoContainer {
     padding-left: 48px;
-    padding-top: 48px;
-    @include xs-block {
+    padding-top: 130px;
+    @include md-block {
         padding-left: 0;
-        padding-top: 35px;
+        padding-top: 70px;
+    }
+    @include xs-block {
+        padding-top: 45px;
     }
 
     &__text {
-        @include roboto-sans(32px, 400);
-        color:#474747;
+        @include roboto-sans(40px, 300);
+        color:#50667B;
         margin-bottom: 32px;
-        @include xs-block {
+        @include md-block {
+            font-size: 40px;
+        }
+        @include md-block {
             text-align: center;
         }
     }

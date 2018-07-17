@@ -39,8 +39,10 @@
         @content;
     }
 }
-@mixin radius($size) {
-    border-radius: $size;
+@mixin radius($size, $topLeft: null, $topRight: null) {
+    @if $size {border-radius: $size;}
+    @if $topLeft {border-top-left-radius: $topLeft}
+    @if $topRight {border-top-right-radius: $topRight}
 }
 @mixin m-auto() {
     margin-left: auto;
@@ -60,4 +62,14 @@
 }
 @mixin link-reset() {
     text-decoration: none;
+}
+@mixin absolute-center($centerY: false) {
+    position: absolute;
+    left: 50%;
+    @if $centerY {
+        transform: translateX(-50%) translateY(50%);
+    } @else {
+        transform: translateX(-50%);
+    }
+    @content;
 }

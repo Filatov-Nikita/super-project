@@ -1,8 +1,8 @@
 .programmSection {
     padding:  40px 0 50px 50px;
-    margin-bottom: 60px;
-    @include xs-block {padding-left: 0;  margin-bottom: 45px;}
+    @include md-block {padding-left: 0;}
     background-image: linear-gradient(90deg,#2eac6a,#81be00);
+    overflow: hidden;
     &__title {
         color:$wht;
         @include roboto-sans(44px, 700);
@@ -48,11 +48,12 @@
     &__item {
         @include col();
         @include size(5.5);
+        @include size-md(11);
         @include size-xs(11);
         color: $black;
-        padding: 24px 15px 38px 35px;
+        padding: 20px 15px 32px 35px;
         @include radius(3px);
-        @include bg($wht);
+        @include bg(#ddd);
         position: relative;
         margin-bottom: 48px;
         z-index: 100;
@@ -70,11 +71,12 @@
         }
     }
     &__header {
-        @include roboto-sans(30px, 500);
+        @include roboto-sans(26px, 500);
         margin-bottom: 40px;
+        color: rgb(61, 78, 94);
     }
     &__description {
-        @include roboto-sans(24px, 300);
+        @include roboto-sans(20px, 300);
         line-height: 1.7;
     }
 }

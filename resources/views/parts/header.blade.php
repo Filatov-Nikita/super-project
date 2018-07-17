@@ -19,6 +19,9 @@
             <span id="lines"></span>
         </div>
     </div>
+    
 </header>
-<div class="yiellowButton">Стать профи</div>
 
+<div class="l-button-container">
+    <div class="yiellowButton">Стать профи</div> 
+</div>

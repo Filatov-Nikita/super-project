@@ -13,5 +13,12 @@ let mix = require('laravel-mix');
 
 mix.sass('resources/assets/sass/app.scss', 'public/css').options({ autoprefixer: false,
     processCssUrls: false,
+    cleanCss: {
+        level: {
+            1: {
+                specialComments: 'none'
+            }
+        }
+    }
 });
 mix.browserSync('localhost/course/public');

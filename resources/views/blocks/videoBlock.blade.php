@@ -2,7 +2,7 @@
     <div class="containerPurpureBlock">
         <div class="wrapper">
             <div class="mainItemBlock">
-                <div class="mainItemBlock__text">Вы научитесь способу, который<br/>упростит и ускорит разработку<br/>ваших проектов в <span class="mainItemBlock__text-pick">3 раза.</span></div>
+                <div class="mainItemBlock__text">Вы научитесь способу, который упростит и ускорит <br/> разработку ваших проектов в <span class="mainItemBlock__text-pick">3 раза.</span></div>
             </div>
         </div>
     </div>

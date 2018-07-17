@@ -3,13 +3,18 @@
     padding-bottom: 25px;
     $colorLogoText:#263154;
     $bg: map-get($map: $colors, $key: footerBg);
-  //  min-height: 150px;
     @include bg($bg);
     &__socialAndContacts {
         color: $colorLogoText;
         @include source-sans(20px, 400);
         display: inline-block;
         vertical-align: middle;
+        @include md-block {
+            text-align: center;
+            display: block;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
     }
     &__logo {
         margin-bottom: 10px;
@@ -22,18 +27,31 @@
         display: inline-block;
         margin-left: 150px;
         width: 100%;
+        @include md-block {
+            @include m-auto;
+            display: block;
+        }
         max-width: 750px;
         ul {
             @include dflex();
             justify-content: space-between;
-        }
-        li {
-           // margin-right: 35px;
+            @include md-block {
+                display: block;
+                text-align: center;
+            }
         }
         a {
             @include roboto-sans(16px, 400);
             @include link-reset();
-            color:#474747;
+            @include md-block {
+                display: block;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            @include md-block {
+                font-size: 18px;
+            }
+            color:#000000;
             @include hover(true, color) {
                 color:$purpure;
                 text-decoration: underline;
